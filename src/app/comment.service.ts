@@ -3,7 +3,7 @@ import { Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { WebsocketService } from './websocket.service';
 
-const SERVER_URL = 'ws://localhost:3000/comment';
+const SERVER_URL = 'ws://danmu.phytro.com/ws/comment';
 
 export interface Comment {
   color: string

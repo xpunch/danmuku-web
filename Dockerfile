@@ -5,7 +5,7 @@ FROM node:13.1.0 AS builder
 
 WORKDIR /danmuku
 COPY . .
-RUN npm install
+RUN npm install && npm install -g @angular/cli
 RUN pwd && ls && ng version && npm run build
 
 # ---------------
