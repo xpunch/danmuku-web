@@ -10,7 +10,7 @@ import { CommentService, Comment } from './comment.service';
 })
 export class AppComponent implements OnInit {
 
-  private comment: Comment = {
+  public comment: Comment = {
     text: '',
     color: 'white',
     size: 1,

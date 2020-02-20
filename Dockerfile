@@ -4,7 +4,7 @@
 FROM node:12.16.1 AS builder
 
 COPY . .
-RUN npm install && npm install -g @angular/cli
+RUN pwd && ls && npm install && npm install -g @angular/cli && ng version
 RUN npm run build
 
 RUN pw && ls
