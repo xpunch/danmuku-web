@@ -6,7 +6,8 @@ FROM node:12.16.1
 COPY . .
 RUN npm install \
     npm install -g @angular/cli \
-    npm run build
+    npm run build \
+    ls
 
 # ---------------
 # Final Container
