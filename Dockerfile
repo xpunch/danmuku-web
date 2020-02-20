@@ -3,10 +3,8 @@
 # -------
 FROM node:12.16.1 AS builder
 
-WORKDIR /danmuku
 COPY . .
-RUN npm install \
-    npm install -g @angular/cli
+RUN npm install && npm install -g @angular/cli
 RUN npm run build
 
 RUN pw && ls
