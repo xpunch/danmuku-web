@@ -3,6 +3,7 @@
 # -------
 FROM node:12.16.1
 
+COPY . .
 RUN npm install && npm run build
 
 # ---------------
