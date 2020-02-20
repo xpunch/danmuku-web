@@ -1,13 +1,12 @@
 # -------
 # Builder
 # -------
-FROM node:12.16.1 AS builder
+FROM node:13.1.0 AS builder
 
+WORKDIR /danmuku
 COPY . .
-RUN pwd && ls && npm install && npm install -g @angular/cli && ng version
-RUN npm run build
-
-RUN pw && ls
+RUN npm install
+RUN pwd && ls && ng version && npm run build
 
 # ---------------
 # Final Container
